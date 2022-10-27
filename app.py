@@ -1,4 +1,5 @@
 from flask import Flask
+import random
 # TODO: Follow the assignment instructions to complete the required routes!
 # (And make sure to delete this TODO message when you're done!)
 app = Flask(__name__)
@@ -41,6 +42,15 @@ def say_n_times(word, number):
         for i in range(int(number)):
             repeat_str += word + ' '
         return repeat_str
+
+
+@app.route('/dicegame')
+def dicegame():
+    random_number = random.randint(1, 6)
+    if random_number == 6:
+        return 'You rolled a 6. You won!'
+    else:
+        return f'You rolled a {random_number}. You lost!'
 
 
 # Tells Python how to run the server. Goes at the bottom of file.
