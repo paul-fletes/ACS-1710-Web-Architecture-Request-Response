@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
+    # My name is Paul, actually.
     return 'Are you there, world? It\'s me, Ducky!'
 
 
