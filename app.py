@@ -24,6 +24,11 @@ def mad_lib(adjective, noun):
     return f'They jumped {adjective} into the {noun} with a quickness.'
 
 
+@app.route('/multiply/<number1>/<number2>')
+def multiply_two_nums(number1, number2):
+    return f'{number1} times {number2} equals {int(number1)*int(number2)}'
+
+
 # Tells Python how to run the server. Goes at the bottom of file.
 if __name__ == '__main__':
     app.run(debug=True)
