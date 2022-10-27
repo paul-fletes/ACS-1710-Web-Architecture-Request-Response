@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return 'Are you there, world? It\'s me, Paul!'
+    return 'Are you there, world? It\'s me, Ducky!'
 
 
 @app.route('/animal/<users_animal>')
