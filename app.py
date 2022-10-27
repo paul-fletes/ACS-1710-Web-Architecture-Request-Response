@@ -14,5 +14,11 @@ def fave_animal(users_animal):
     return f'Wow, {users_animal} is my favorite animal, too!'
 
 
+@app.route('/dessert/<users_dessert>')
+def fave_dessert(users_dessert):
+    return f'How did you know I liked {users_dessert}?'
+
+
+# Tells Python how to run the server. Goes at the bottom of file.
 if __name__ == '__main__':
     app.run(debug=True)
